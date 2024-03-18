@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     .hero-section {
       background-color: #f8f9fa;
@@ -34,12 +36,15 @@
       background-color: #0176d3;
       border-color: #0176d3;
       color: #fff;
+      padding: 12px 32px;
     }
 
     .btn-about {
-      background-color: #fe9339;
-      border-color: #fe9339;
-      color: #fff;
+      background-color: #fff;
+      border-color: #0176d3;
+      color: #0176d3;
+      padding: 12px 32px;
+      border-width: 2px;
     }
 
     .navbar-light .navbar-nav .nav-link {
@@ -55,6 +60,10 @@
 
     .skills-img {
       max-height: 100px;
+    }
+
+    .hero-img {
+      border: 5px solid #0a9dda;
     }
 
     h3 {
@@ -81,13 +90,13 @@
             <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
         </ul>
       </div>
@@ -99,51 +108,115 @@
         <div class="col-md-5">
           <h1 class="display-5 fw-bold title-main">Billy Rodriguez</h1>
           <p class="display-1 fw-bold title-sub">Email Developer</p>
-          <p class="fs-5 text-custom">I specialize in creating visually appealing and responsive emails that boost customer engagement and offer effective solutions.</p>
-          <a href="#" class="btn btn-lg btn-portfolio me-2">My Portfolio</a>
-          <a href="#" class="btn btn-lg btn-about">About Me</a>
+          <p class="fs-5 text-custom mb-0">I specialize in creating visually appealing and responsive emails that boost customer engagement and offer effective solutions for Fortune 500 Companies.</p>
+          <a href="#" class="btn btn-lg btn-portfolio me-2 mt-3">My Portfolio</a>
+          <a href="#" class="btn btn-lg btn-about mt-3">About Me</a>
         </div>
         <div class="col-md-5 d-none d-md-block">
-          <img src="https://t4.ftcdn.net/jpg/01/07/43/45/240_F_107434511_iarF2z88c6Ds6AlgtwotHSAktWCdYOn7.jpg" alt="Profile Image" class="img-fluid mx-auto d-block">
+          <img src="https://i.ibb.co/Pz1JtvN/Hero-IMG-5.png" alt="Profile Image" class="img-fluid mx-auto d-block">
         </div>
       </div>
     </div>
   </section>
-  <section class="text-center mt-5">
+  <section class="trusted-companies mt-5">
+    <div class="container text-center">
+      <h2>Trusted by Fortune 500 Companies</h2>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- First set of logos -->
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img src="logo1.png" class="mx-2" alt="Company 1 Logo">
+              <img src="logo2.png" class="mx-2" alt="Company 2 Logo">
+              <img src="logo3.png" class="mx-2" alt="Company 3 Logo">
+              <img src="logo4.png" class="mx-2" alt="Company 4 Logo">
+              <img src="logo5.png" class="mx-2" alt="Company 5 Logo">
+            </div>
+          </div>
+          <!-- Second set of logos -->
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img src="logo6.png" class="mx-2" alt="Company 6 Logo">
+              <img src="logo7.png" class="mx-2" alt="Company 7 Logo">
+              <img src="logo8.png" class="mx-2" alt="Company 8 Logo">
+              <img src="logo9.png" class="mx-2" alt="Company 9 Logo">
+              <img src="logo10.png" class="mx-2" alt="Company 10 Logo">
+            </div>
+          </div>
+          <!-- Add more sets of logos as needed -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="text-center mt-5" id="skills">
     <h2 class="mb-5 display-4 fw-bold title-sub">My Skills</h2>
     <div class="container">
       <div class="row my-5">
         <!-- Add one .col- for each image -->
-        <div class="col"><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5" class="img-fluid skills-img">
           <h3>HTML</h3>
         </div>
-        <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS3" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS3" class="img-fluid skills-img">
           <h3>CSS</h3>
         </div>
-        <div class="col"><img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="JavaScript" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="JavaScript" class="img-fluid skills-img">
           <h3>JavaScript</h3>
         </div>
       </div>
       <div class="row my-5">
-        <div class="col"><img src="https://sergey-agadzhanov.gallerycdn.vsassets.io/extensions/sergey-agadzhanov/ampscript/3.0.6/1668514161646/Microsoft.VisualStudio.Services.Icons.Default" alt="Ampscript" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://sergey-agadzhanov.gallerycdn.vsassets.io/extensions/sergey-agadzhanov/ampscript/3.0.6/1668514161646/Microsoft.VisualStudio.Services.Icons.Default" alt="Ampscript" class="img-fluid skills-img">
           <h3>Ampscript</h3>
         </div>
-        <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png" alt="Salesforce" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png" alt="Salesforce" class="img-fluid skills-img">
           <h3>Salesforce</h3>
         </div>
-        <div class="col"><img src="https://cdn.freebiesupply.com/logos/large/2x/litmus-logo-png-transparent.png" alt="Litmus" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://cdn.freebiesupply.com/logos/large/2x/litmus-logo-png-transparent.png" alt="Litmus" class="img-fluid skills-img">
           <h3>Litmus</h3>
         </div>
       </div>
       <div class="row my-5">
-        <div class="col"><img src="https://www.pngall.com/wp-content/uploads/13/Figma-Logo.png" alt="Figma" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://www.pngall.com/wp-content/uploads/13/Figma-Logo.png" alt="Figma" class="img-fluid skills-img">
           <h3>Figma</h3>
         </div>
-        <div class="col"><img src="https://iconape.com/wp-content/files/wy/346550/png/346550.png" alt="Eloqua" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://iconape.com/wp-content/files/wy/346550/png/346550.png" alt="Eloqua" class="img-fluid skills-img">
           <h3>Eloqua</h3>
         </div>
-        <div class="col"><img src="https://shreyhsoftsolutions.com/wp-content/uploads/2023/12/liquid-logo-text.png" alt="Liquid" class="img-fluid skills-img">
+        <div class="col mt-auto"><img src="https://shreyhsoftsolutions.com/wp-content/uploads/2023/12/liquid-logo-text.png" alt="Liquid" class="img-fluid skills-img">
           <h3>Liquid</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-me py-5" style="background-color: #0176d3; color: #fff;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img src="https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2023/04/success-ecosystem-min.png?resize=768,768" alt="Your Name" class="img-fluid">
+        </div>
+        <div class="col-md-6 text-white">
+          <h3 class="display-5 fw-bold">Get to know me</h3>
+          <p>Hello there! I'm [Your Name], a [Your Profession] with a keen eye for [Your Skills]. I excel at [What You Do Best]. My expertise includes [Your Skills and Tools You Use].</p>
+          <p>Beyond my professional skills, I'm an avid [Your Hobbies] who loves to [What You Love Doing]. I find joy in [Something You Enjoy].</p>
+          <!-- Social Icons -->
+          <div>
+            <a href="your-linkedin" target="_blank" style="color: #fff;">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="your-github" target="_blank" style="color: #fff;">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="your-twitter" target="_blank" style="color: #fff;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
