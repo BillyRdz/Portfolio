@@ -64,6 +64,7 @@
 
     .skills-img {
       max-height: 100px;
+      max-width: 100px;
     }
 
     h3 {
@@ -130,40 +131,14 @@
     }
 
     .company-logo {
-      max-height: 25px;
-      max-width: 100%;
+      max-height: 100px;
+      max-width: 100px;
       filter: grayscale(100%);
       object-fit: contain;
     }
 
     .trusted-companies h2 {
       color: #606060;
-    }
-
-    .carousel-item {
-      transition: transform 0.6s ease-in-out;
-    }
-
-    @media (max-width: 768px) {
-      .carousel {
-        display: none;
-      }
-
-      #staticLogos {
-        display: flex !important;
-      }
-
-      .static-logos {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .static-logos img {
-        margin: 5px;
-        max-width: 100px;
-        filter: grayscale(100%);
-      }
     }
   </style>
   <title>Billy Rodriguez</title>
@@ -215,49 +190,39 @@
   <section class="trusted-companies my-5">
     <div class="container text-center">
       <h2 class="trusted mb-3">Trusted by Fortune 500 Companies</h2>
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
-          <!-- First set of logos -->
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-              <img src="https://seeklogo.com/images/C/citi-bank-logo-FB339E66A3-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Citi Bank Logo">
-              <img src="https://seeklogo.com/images/T/Toyota-logo-16FFC40754-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Toyota Logo">
-              <img src="https://seeklogo.com/images/T/t-mobile-logo-18FAFAB668-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="T-Mobile Logo">
-              <img src="https://seeklogo.com/images/L/Lincoln_Financial_Group-logo-57B245561F-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Lincoln Financial Group Logo">
-              <img src="https://seeklogo.com/images/M/marriott-bonvoy-logo-D0818E1743-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Marriott Bonvoy Logo">
-            </div>
-          </div>
-          <!-- Second set of logos -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <img src="https://seeklogo.com/images/U/united-airlines-logo-9AD3E5B032-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="United Airlines Logo">
-              <img src="https://seeklogo.com/images/H/hotel-hilton-logo-DF508787A7-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Hilton Logo">
-              <img src="https://seeklogo.com/images/S/southwest-airlines-logo-D911FF4C83-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Southwest Logo">
-              <img src="https://seeklogo.com/images/D/Delta-logo-BC0D082ABD-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Delta Logo">
-              <img src="https://seeklogo.com/images/A/american-airlines-logo-B2CD32092E-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="American Airlines Logo">
-            </div>
-          </div>
+      <div class="row static-logos d-flex justify-content-center my-4">
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/C/citi-bank-logo-FB339E66A3-seeklogo.com.png" class="company-logo img-fluid" alt="Citi Bank Logo">
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/T/Toyota-logo-16FFC40754-seeklogo.com.png" class="company-logo img-fluid" alt="Toyota Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/T/t-mobile-logo-18FAFAB668-seeklogo.com.png" class="company-logo img-fluid" alt="T-Mobile Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/L/Lincoln_Financial_Group-logo-57B245561F-seeklogo.com.png" class="company-logo img-fluid" alt="Lincoln Financial Group Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/M/marriott-bonvoy-logo-D0818E1743-seeklogo.com.png" class="company-logo img-fluid" alt="Marriott Bonvoy Logo">
+        </div>
       </div>
-      <div class="static-logos d-none" id="staticLogos">
-        <img src="https://seeklogo.com/images/C/citi-bank-logo-FB339E66A3-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Citi Bank Logo">
-        <img src="https://seeklogo.com/images/T/Toyota-logo-16FFC40754-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Toyota Logo">
-        <img src="https://seeklogo.com/images/T/t-mobile-logo-18FAFAB668-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="T-Mobile Logo">
-        <img src="https://seeklogo.com/images/L/Lincoln_Financial_Group-logo-57B245561F-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Lincoln Financial Group Logo">
-        <img src="https://seeklogo.com/images/M/marriott-bonvoy-logo-D0818E1743-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Marriott Bonvoy Logo">
-        <img src="https://seeklogo.com/images/U/united-airlines-logo-9AD3E5B032-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="United Airlines Logo">
-        <img src="https://seeklogo.com/images/H/hotel-hilton-logo-DF508787A7-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Hilton Logo">
-        <img src="https://seeklogo.com/images/S/southwest-airlines-logo-D911FF4C83-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Southwest Logo">
-        <img src="https://seeklogo.com/images/D/Delta-logo-BC0D082ABD-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Delta Logo">
-        <img src="https://seeklogo.com/images/A/american-airlines-logo-B2CD32092E-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="American Airlines Logo">
+      <div class="row static-logos d-flex justify-content-center my-4">
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/U/united-airlines-logo-9AD3E5B032-seeklogo.com.png" class="company-logo img-fluid" alt="United Airlines Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/H/hotel-hilton-logo-DF508787A7-seeklogo.com.png" class="company-logo img-fluid" alt="Hilton Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/S/southwest-airlines-logo-D911FF4C83-seeklogo.com.png" class="company-logo img-fluid" alt="Southwest Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/D/Delta-logo-BC0D082ABD-seeklogo.com.png" class="company-logo img-fluid" alt="Delta Logo">
+        </div>
+        <div class="col my-3 d-flex justify-content-center">
+          <img src="https://seeklogo.com/images/A/american-airlines-logo-B2CD32092E-seeklogo.com.png" class="company-logo img-fluid" alt="American Airlines Logo">
+        </div>
       </div>
     </div>
   </section>
