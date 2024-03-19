@@ -128,6 +128,43 @@
     .social-icons i {
       font-size: 30px;
     }
+
+    .company-logo {
+      max-height: 25px;
+      max-width: 100%;
+      filter: grayscale(100%);
+      object-fit: contain;
+    }
+
+    .trusted-companies h2 {
+      color: #606060;
+    }
+
+    .carousel-item {
+      transition: transform 0.6s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .carousel {
+        display: none;
+      }
+
+      #staticLogos {
+        display: flex !important;
+      }
+
+      .static-logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .static-logos img {
+        margin: 5px;
+        max-width: 100px;
+        filter: grayscale(100%);
+      }
+    }
   </style>
   <title>Billy Rodriguez</title>
 </head>
@@ -169,7 +206,7 @@
           <a href="#portfolio" class="btn btn-lg btn-portfolio me-2 my-3">My Portfolio</a>
           <a href="#about" class="btn btn-lg btn-about my-3">About Me</a>
         </div>
-        <div class="col-md-5 mt-5">
+        <div class="col-md-5 my-5">
           <img src="https://i.ibb.co/QpgkTkD/picofme-2.png" alt="Profile Image" class="img-fluid mx-auto d-block">
         </div>
       </div>
@@ -177,30 +214,29 @@
   </section>
   <section class="trusted-companies my-5">
     <div class="container text-center">
-      <h2>Trusted by Fortune 500 Companies</h2>
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <h2 class="trusted mb-3">Trusted by Fortune 500 Companies</h2>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
           <!-- First set of logos -->
           <div class="carousel-item active">
             <div class="d-flex justify-content-center">
-              <img src="logo1.png" class="mx-2" alt="Company 1 Logo">
-              <img src="logo2.png" class="mx-2" alt="Company 2 Logo">
-              <img src="logo3.png" class="mx-2" alt="Company 3 Logo">
-              <img src="logo4.png" class="mx-2" alt="Company 4 Logo">
-              <img src="logo5.png" class="mx-2" alt="Company 5 Logo">
+              <img src="https://seeklogo.com/images/C/citi-bank-logo-FB339E66A3-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Citi Bank Logo">
+              <img src="https://seeklogo.com/images/T/Toyota-logo-16FFC40754-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Toyota Logo">
+              <img src="https://seeklogo.com/images/T/t-mobile-logo-18FAFAB668-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="T-Mobile Logo">
+              <img src="https://seeklogo.com/images/L/Lincoln_Financial_Group-logo-57B245561F-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Lincoln Financial Group Logo">
+              <img src="https://seeklogo.com/images/M/marriott-bonvoy-logo-D0818E1743-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Marriott Bonvoy Logo">
             </div>
           </div>
           <!-- Second set of logos -->
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
-              <img src="logo6.png" class="mx-2" alt="Company 6 Logo">
-              <img src="logo7.png" class="mx-2" alt="Company 7 Logo">
-              <img src="logo8.png" class="mx-2" alt="Company 8 Logo">
-              <img src="logo9.png" class="mx-2" alt="Company 9 Logo">
-              <img src="logo10.png" class="mx-2" alt="Company 10 Logo">
+              <img src="https://seeklogo.com/images/U/united-airlines-logo-9AD3E5B032-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="United Airlines Logo">
+              <img src="https://seeklogo.com/images/H/hotel-hilton-logo-DF508787A7-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Hilton Logo">
+              <img src="https://seeklogo.com/images/S/southwest-airlines-logo-D911FF4C83-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Southwest Logo">
+              <img src="https://seeklogo.com/images/D/Delta-logo-BC0D082ABD-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="Delta Logo">
+              <img src="https://seeklogo.com/images/A/american-airlines-logo-B2CD32092E-seeklogo.com.png" class="mx-4 company-logo img-fluid" alt="American Airlines Logo">
             </div>
           </div>
-          <!-- Add more sets of logos as needed -->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -210,6 +246,18 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </a>
+      </div>
+      <div class="static-logos d-none" id="staticLogos">
+        <img src="https://seeklogo.com/images/C/citi-bank-logo-FB339E66A3-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Citi Bank Logo">
+        <img src="https://seeklogo.com/images/T/Toyota-logo-16FFC40754-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Toyota Logo">
+        <img src="https://seeklogo.com/images/T/t-mobile-logo-18FAFAB668-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="T-Mobile Logo">
+        <img src="https://seeklogo.com/images/L/Lincoln_Financial_Group-logo-57B245561F-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Lincoln Financial Group Logo">
+        <img src="https://seeklogo.com/images/M/marriott-bonvoy-logo-D0818E1743-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Marriott Bonvoy Logo">
+        <img src="https://seeklogo.com/images/U/united-airlines-logo-9AD3E5B032-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="United Airlines Logo">
+        <img src="https://seeklogo.com/images/H/hotel-hilton-logo-DF508787A7-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Hilton Logo">
+        <img src="https://seeklogo.com/images/S/southwest-airlines-logo-D911FF4C83-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Southwest Logo">
+        <img src="https://seeklogo.com/images/D/Delta-logo-BC0D082ABD-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="Delta Logo">
+        <img src="https://seeklogo.com/images/A/american-airlines-logo-B2CD32092E-seeklogo.com.png" class="m-4 company-logo img-fluid" alt="American Airlines Logo">
       </div>
     </div>
   </section>
@@ -323,8 +371,6 @@
       </div>
     </div>
   </section>
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Portfolio Filtering Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -391,5 +437,7 @@
       });
     });
   </script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
