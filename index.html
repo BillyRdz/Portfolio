@@ -11,9 +11,6 @@
   <style>
     .hero-section {
       background-color: #f8f9fa;
-      /* Adjust the color to match your design */
-      padding: 50px 0;
-      /* Add padding as needed */
     }
 
     .navbar-custom {
@@ -47,9 +44,16 @@
       border-width: 2px;
     }
 
-    .navbar-light .navbar-nav .nav-link {
+    .navbar-light .navbar-nav .nav-link,
+    .nav-link {
       color: #032d60;
       font-weight: 600;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      color: #fff;
+      background-color: #0176d3;
     }
 
     .img-fluid {
@@ -62,14 +66,67 @@
       max-height: 100px;
     }
 
-    .hero-img {
-      border: 5px solid #0a9dda;
-    }
-
     h3 {
       color: #032d60;
       font-weight: 600;
       padding-top: 10px;
+    }
+
+    .bg-pastel-orange {
+      background-color: #ffd1c1;
+    }
+
+    .bg-pastel-blue {
+      background-color: #c1daff;
+    }
+
+    .bg-pastel-purple {
+      background-color: #e1c1ff;
+    }
+
+    .card {
+      transition: transform .3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .portfolio-item {
+      transition: transform 0.5s, opacity 0.5s;
+      opacity: 0;
+      transform: scale(0.95);
+      height: 0;
+      /* Hide the item initially */
+      overflow: hidden;
+      margin-bottom: 0;
+      /* Remove the margin to collapse the space */
+    }
+
+    .show {
+      opacity: 1;
+      transform: scale(1);
+      height: auto;
+      /* Set the height to auto to show the item */
+      margin-bottom: 24px;
+      /* Adjust the margin as needed */
+    }
+
+    /* CSS to visually hide but not remove the layout flow */
+    .hidden-item {
+      visibility: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .social-icons i {
+      font-size: 30px;
     }
   </style>
   <title>Billy Rodriguez</title>
@@ -87,7 +144,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skills">Skills</a>
@@ -102,23 +159,23 @@
       </div>
     </div>
   </nav>
-  <section class="hero-section">
+  <section class="hero-section" id="home">
     <div class="container">
       <div class="row align-items-center justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-5 mt-5">
           <h1 class="display-5 fw-bold title-main">Billy Rodriguez</h1>
           <p class="display-1 fw-bold title-sub">Email Developer</p>
           <p class="fs-5 text-custom mb-0">I specialize in creating visually appealing and responsive emails that boost customer engagement and offer effective solutions for Fortune 500 Companies.</p>
-          <a href="#" class="btn btn-lg btn-portfolio me-2 mt-3">My Portfolio</a>
-          <a href="#" class="btn btn-lg btn-about mt-3">About Me</a>
+          <a href="#portfolio" class="btn btn-lg btn-portfolio me-2 my-3">My Portfolio</a>
+          <a href="#about" class="btn btn-lg btn-about my-3">About Me</a>
         </div>
-        <div class="col-md-5 d-none d-md-block">
-          <img src="https://i.ibb.co/Pz1JtvN/Hero-IMG-5.png" alt="Profile Image" class="img-fluid mx-auto d-block">
+        <div class="col-md-5 mt-5">
+          <img src="https://i.ibb.co/QpgkTkD/picofme-2.png" alt="Profile Image" class="img-fluid mx-auto d-block">
         </div>
       </div>
     </div>
   </section>
-  <section class="trusted-companies mt-5">
+  <section class="trusted-companies my-5">
     <div class="container text-center">
       <h2>Trusted by Fortune 500 Companies</h2>
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -156,7 +213,7 @@
       </div>
     </div>
   </section>
-  <section class="text-center mt-5" id="skills">
+  <section class="text-center my-5" id="skills">
     <h2 class="mb-5 display-4 fw-bold title-sub">My Skills</h2>
     <div class="container">
       <div class="row my-5">
@@ -195,34 +252,144 @@
       </div>
     </div>
   </section>
-  <section class="about-me py-5" style="background-color: #0176d3; color: #fff;">
+  <section id="about" class="about-me mt-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-3 mb-md-0">
-          <img src="https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2023/04/success-ecosystem-min.png?resize=768,768" alt="Your Name" class="img-fluid">
+          <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Me" class="img-fluid">
         </div>
-        <div class="col-md-6 text-white">
-          <h3 class="display-5 fw-bold">Get to know me</h3>
-          <p>Hello there! I'm [Your Name], a [Your Profession] with a keen eye for [Your Skills]. I excel at [What You Do Best]. My expertise includes [Your Skills and Tools You Use].</p>
-          <p>Beyond my professional skills, I'm an avid [Your Hobbies] who loves to [What You Love Doing]. I find joy in [Something You Enjoy].</p>
-          <!-- Social Icons -->
-          <div>
-            <a href="your-linkedin" target="_blank" style="color: #fff;">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="your-github" target="_blank" style="color: #fff;">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="your-twitter" target="_blank" style="color: #fff;">
-              <i class="fab fa-twitter"></i>
-            </a>
+        <div class="col-md-5 text-custom">
+          <h4 class="display-5 fw-bold title-sub my-3">Get to know me</h4>
+          <p class="fs-5">Hi there! I'm Billy Rodriguez—a seasoned Email Developer with a flair for crafting engaging, responsive email campaigns that drive meaningful engagement. With expertise in HTML, CSS, JavaScript, and Salesforce Marketing Cloud, my mission is to turn marketing challenges into opportunities for connection and conversion. Beyond the code, I'm passionate about family and soccer, where I find inspiration and balance.</p>
+          <p class="fs-5 mb-0"> Driven by innovation and a commitment to excellence, I'm on a constant quest to elevate email marketing strategies. Let's connect and make your next campaign unforgettable.</p>
+          <div class="social-icons my-3 d-flex">
+            <a href="https://www.linkedin.com/in/billyrdz/" target="_blank"><i class="fab fa-linkedin text-custom fa-2x mx-3"></i></a>
+            <a href="https://github.com/BillyRdz" target="_blank"><i class="fab fa-github text-custom fa-2x mx-3"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Optional JavaScript; choose one of the two! -->
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <section id="portfolio" class="portfolio-section my-5">
+    <div class="container text-center">
+      <h2 class="mb-5 display-4 fw-bold title-sub">My Projects</h2>
+      <ul class="nav nav-pills justify-content-center mb-4">
+        <li class="nav-item"><a class="nav-link active" href="#" data-portfolio-filter="all">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-portfolio-filter="emails">Emails</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-portfolio-filter="websites">Websites</a>
+        </li>
+      </ul>
+      <div class="row d-flex flex-wrap flex-row">
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <div class="card bg-pastel-orange">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" class="card-img-top" alt="Helios Productions">
+            <!-- Other card content -->
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <div class="card bg-pastel-blue">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" class="card-img-top" alt="Savannah Bee Company">
+            <!-- Other card content -->
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="websites">
+          <div class="card bg-pastel-purple">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" class="card-img-top" alt="Syncpro">
+            <!-- Other card content -->
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <div class="card bg-pastel-orange">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" class="card-img-top" alt="Helios Productions">
+            <!-- Other card content -->
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <div class="card bg-pastel-blue">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" class="card-img-top" alt="Savannah Bee Company">
+            <!-- Other card content -->
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="websites">
+          <div class="card bg-pastel-purple">
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" class="card-img-top" alt="Syncpro">
+            <!-- Other card content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Portfolio Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var portfolioFilterLinks = document.querySelectorAll('[data-portfolio-filter]');
+      var portfolioItems = document.querySelectorAll('.portfolio-item');
+
+      portfolioFilterLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Get the filter category from the clicked link
+          var category = this.getAttribute('data-portfolio-filter');
+
+          // Remove 'active' class from all portfolio filter links and add to the clicked one
+          portfolioFilterLinks.forEach(function (nav) { nav.classList.remove('active'); });
+          this.classList.add('active');
+
+          // Filter portfolio items based on the selected category
+          portfolioItems.forEach(function (item) {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+              item.classList.remove('hidden-item');
+              item.classList.add('show');
+            } else {
+              item.classList.add('hidden-item');
+              item.classList.remove('show');
+            }
+          });
+        });
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      var scrollElements = document.querySelectorAll('nav .navbar-nav .nav-link, a.btn.btn-lg.btn-portfolio.me-2.my-3,a.btn.btn-lg.btn-about.my-3');
+
+      scrollElements.forEach(function (element) {
+        element.addEventListener('click', function (e) {
+          var targetId = this.getAttribute('href');
+          if (targetId && targetId.startsWith("#")) {
+            var targetSection = document.querySelector(targetId);
+            if (targetSection) {
+              e.preventDefault(); // Prevent default anchor click behavior
+
+              // Dynamically calculate header's height
+              var header = document.querySelector('.navbar'); // Adjust this selector to your header
+              var headerHeight = header.offsetHeight;
+              var offsetPosition = targetSection.offsetTop - headerHeight;
+
+              // Smooth scroll to the section
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+              });
+
+              // Close the navbar in mobile view
+              var navbarToggler = document.querySelector('.navbar-toggler');
+              var navbarCollapse = document.querySelector('.navbar-collapse');
+              if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
+                // Check if toggler is visible (i.e., in mobile view)
+                var bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+                bsCollapse.hide(); // Use Bootstrap's method to hide
+              }
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
