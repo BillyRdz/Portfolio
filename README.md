@@ -26,15 +26,6 @@ This portfolio highlights several key features and technologies showcasing my sk
 - **Dynamic Filtering**: An interactive feature that allows viewers to filter projects by categories, such as emails and websites, to easily find relevant work samples.
 - **Smooth Scrolling**: Enhanced navigation through different sections of the portfolio, providing a better user experience.
 
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make to this portfolio are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 
